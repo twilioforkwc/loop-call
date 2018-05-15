@@ -15,7 +15,7 @@ loopCall.php
 - このphpファイルを動かすサーバーを用意します。
 
 loopCall.js
-(loopCall.jsはnodeではなく、twilioの環境でだけテストが出来ます。)
+(loopCall.jsはnodeではなく、Twilioの環境でだけテストが出来ます。)
 - Twilioにloop call Functionsを作ってloopCall.jsのコードを貼り付けます。
 
 ## セットアップ
@@ -24,3 +24,17 @@ loopCall.js
 ```
 $ git clone https://github.com/twilioforkwc/loop-call.git
 ```
+2. $phone_numberの配列に電話をかける電話番号を入れます。
+3. 自分のTwilioアカウントSID, AUTHTOKENを各変数に入力します。
+
+loopCall.php
+- composer installでTwilio SDKを設置します。
+- Twilioから購入した電話番号を$client->calls->createの二目のパラメーターに入力します。
+- create関数の三つ目のパラメーターであるarrayで'url'のvalueは自分が作ったTwiMLまたはFunctionsのurlを入れます。
+- 'statusCallback'のvalueはこのphpが動いているサーバーのアドレスを入力します。
+
+loopCall.js
+- Twilioにloop call Functionsを作ってloopCall.jsのコードを貼り付けます
+- client.calls.createのパラメーターでurlのvalueは自分が作ったTwiMLまたはFunctionsのurlを入れます。
+- fromのvalueはTwilioから購入した電話番号を入力します。
+- statusCallbackのvalueは今作ったloop call Functionsのpathを{{Custom function URL}}の代わりに入れます。
