@@ -15,7 +15,8 @@ loopCall.php
 - このphpファイルを動かすサーバーを用意します。
 
 loopCall.js
-- Twilioでloop call Functionsを用意します。
+(loopCall.jsはnodeではなく、twilioの環境でだけテストが出来ます。)
+- Twilioにloop call Functionsを作ってloopCall.jsのコードを貼り付けます。
 
 ## セットアップ
 
