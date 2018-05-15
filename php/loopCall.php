@@ -2,7 +2,7 @@
 require_once './vendor/autoload.php';
 use Twilio\Rest\Client;
 
-$phone_number = array("+818012341234","+817012341234");
+$phone_number = array("+818012341234","+818012341234");
 $phone_count = count($phone_number);
 $sid = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 $token = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
@@ -19,7 +19,7 @@ if(is_null($_POST['CallStatus']) || ($_POST['CallStatus'] == "no-answer")){
             array("url" => "{{Custom URL}}",
                 'timeout' => 1,
                 'statusCallbackEvent' => array('initiated', 'ringing', 'answered', 'completed'),
-                'statusCallback' => '{{Custom Server URL}}/twilioTest.php?index='.$_GET['index'],
+                'statusCallback' => '{{Custom Server URL}}/loopCall.php?index='.$_GET['index'],
                 'statusCallbackMethod' => 'POST',
             )
         );

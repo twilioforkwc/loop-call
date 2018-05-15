@@ -15,7 +15,7 @@ exports.handler = function(context, event, callback) {
                 url: '{{Custom URL}}',
                 from: '+815012341234',
                 to: phone[event.index],
-                timeout: 2,
+                timeout: 1,
                 statusCallbackEvent: ['initiated', 'ringing', 'answered', 'completed'],
                 statusCallback: '{{Custom function URL}}?index='+event.index,
                 statusCallbackMethod: 'POST'

@@ -1,1 +1,0 @@
-StatusCallback.jsは twilio siteの環境でだけテストが出来ます。
